@@ -1,0 +1,123 @@
+@import 'base';
+$width1:7.5rem;  //盒子宽度
+@mixin box-sizing{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+$img-path3:'e6/';
+$img-path2:'e5/';
+$img-pathF8:'f8/';
+#comment{
+    width: $width1;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto; 
+    
+    /*日期*/ 
+    .data{
+        color: #9b9b9b;
+        font-family: Helvetica 'Neue LT Pro';
+        font-size: 0.22rem;
+        width: 100%;
+        height: 0.52rem;
+        line-height: 0.52rem;
+        padding-left: 0.84rem;
+        text-align: left;
+        background-image: url($img-path+$img-pathF8+'f8_07.png');
+        background-repeat: no-repeat;
+        background-position: 0.44rem 0.18rem;
+        background-size: 0.27rem 0.2rem;
+        font-variant: all-small-caps;
+    }  
+    /*日期*/
+   
+     
+    /*评论*/
+    .com-box{
+        @include box1(100%,auto);
+        background-color: #fff;
+        .line{
+            @include box1(6.17rem,0.01rem);
+            background-color: #d1d1d1;
+            margin-left: 0.39rem;
+            position: relative;
+            .circle{
+                @include cube(0.03rem);
+                position: absolute;
+                top: -0.01rem;
+                background-color: #d3d3d3;
+            }
+            .circle1{
+                left: -0.01rem;
+            }
+            .circle2{
+                left: 0.49rem;
+            }
+            .circle3{
+                left: 2.09rem;
+            }
+            .circle4{
+                left: 2.39rem;
+            }
+            .circle5{
+                left: 3.59rem;
+            }
+            .circle6{
+                left: 4.29rem;
+            }
+            .circle7{
+                left: 4.39rem;
+            }
+            .circle8{
+                right: -0.01rem;
+            }
+        }
+        .com-inf{
+            @include box1(7.02rem,3.24rem);
+            margin: 0.02rem auto 0.26rem;
+            box-shadow: 0.01rem 0.01rem 0.12rem rgba(198,198,198,0.75);
+            border-radius: 0.08rem;   
+        }
+        .com-con{
+            @include box1(100%,100%);
+            padding: 0.05rem 0.26rem 0 0.15rem ;
+            line-height: 0.34rem;
+            font-size: 0.24rem;
+            color: #333;
+            font-weight: normal;
+            text-align: left;
+        }
+        .com-inf1{
+            width: 7.02rem;
+            height: 0.97rem;
+            margin: 0.02rem auto 2.38rem;
+            box-shadow: 0.01rem 0.01rem 0.12rem rgba(198,198,198,0.75);
+            border-radius: 0.08rem;
+        }
+    }
+    .btn1{
+        @include box1(100%,1.07rem);
+        position: relative;
+        .bj,.qd{
+            display: block;
+            @include box1(1.69rem,0.61rem);
+            border-radius: 0.40rem;
+            @include  top-bottom;
+        }
+        .bj{
+            background-image: url($img-path+$img-pathF8+'f8_11.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.69rem 0.61rem;
+            left: 1.24rem;
+        }
+        .qd{
+            background-image: url($img-path+$img-pathF8+'f8_14.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.69rem 0.61rem;
+            right: 1.12rem;
+        }
+        
+    }
+}
